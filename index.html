@@ -178,7 +178,7 @@
   .coverflow-stage { perspective: 1800px; }
   .cf-card {
     position: absolute; top: 50%; left: 50%;
-    width: 300px; height: 388px; margin-left: -150px; margin-top: -194px;
+    width: 360px; height: 372px; margin-left: -180px; margin-top: -186px;
     border-radius: 16px; overflow: hidden;
     transition: transform .7s cubic-bezier(.22,1,.36,1), opacity .7s ease, filter .7s ease;
     transform-style: preserve-3d; cursor: pointer;
@@ -188,13 +188,13 @@
   }
   .cf-card .cf-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(11,11,15,.92) 8%, rgba(11,11,15,.15) 55%, rgba(11,11,15,.5) 100%);
+    background: linear-gradient(to top, rgba(11,11,15,.94) 6%, rgba(11,11,15,.04) 46%, rgba(11,11,15,.28) 100%);
   }
   .cf-card .cf-tint {
     position: absolute; inset: 0; background: var(--voltage); mix-blend-mode: multiply; opacity: .06;
   }
   @media (max-width: 639px) {
-    .cf-card { width: 256px; height: 332px; margin-left: -128px; margin-top: -166px; }
+    .cf-card { width: 284px; height: 356px; margin-left: -142px; margin-top: -178px; }
   }
 
   /* ============ Comparison ============ */
@@ -364,6 +364,10 @@
 
   .reveal { opacity: 0; }
 
+  /* Heading highlight — voltage accent on the key word(s) of a section heading.
+     Solid color (not a gradient) so it survives SplitText per-char wrapping. */
+  .hl { color: var(--voltage); text-shadow: 0 0 24px rgba(46,75,255,.32); }
+
   /* Hero accent headline word (SplitText-safe: solid color so per-char spans stay visible) */
   .hero-grad {
     color: var(--voltage);
@@ -516,7 +520,7 @@
 
     <!-- Contact + mobile toggle -->
     <div class="flex items-center gap-2 shrink-0">
-      <a href="tel:+919947648028" class="btn btn-primary hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold font-display">Call Us <i data-lucide="phone" class="w-4 h-4"></i></a>
+      <a href="tel:+919947648028" class="btn btn-primary hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold font-display">Book a Discovery Call <i data-lucide="phone" class="w-4 h-4"></i></a>
       <button id="menuToggle" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/10 text-ivory hover:bg-white/5 transition-colors">
         <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
@@ -535,7 +539,7 @@
   <a href="#work" class="mobile-link font-display text-3xl font-semibold py-3 text-steel-light hover:text-ivory transition-colors">Work</a>
   <a href="#compare" class="mobile-link font-display text-3xl font-semibold py-3 text-steel-light hover:text-ivory transition-colors">Why Nexora</a>
   <a href="#approach" class="mobile-link font-display text-3xl font-semibold py-3 text-steel-light hover:text-ivory transition-colors">Process</a>
-  <a href="tel:+919947648028" class="mobile-link btn btn-primary mt-6 inline-flex items-center gap-2 rounded-full px-8 py-3 text-base font-semibold font-display">Call Us Now <i data-lucide="phone" class="w-4 h-4"></i></a>
+  <a href="tel:+919947648028" class="mobile-link btn btn-primary mt-6 inline-flex items-center gap-2 rounded-full px-8 py-3 text-base font-semibold font-display">Book a Discovery Call <i data-lucide="phone" class="w-4 h-4"></i></a>
 </div>
 
 <!-- ============ HERO ============ -->
@@ -696,7 +700,7 @@
 
       <!-- centered headline -->
       <h2 id="costStatement" class="w-full lg:w-auto order-first lg:order-none lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 text-center font-display font-700 tracking-display text-[2.4rem] sm:text-5xl lg:text-[3.6rem] leading-[1.05] text-ivory">
-        The Hidden Cost<br />of Manual Work
+        The <span class="hl">Hidden Cost</span><br />of Manual Work
       </h2>
 
       <!-- floating pills (static + wrapped on mobile, scattered on desktop) -->
@@ -716,7 +720,7 @@
     <div id="leakWrap">
       <div class="text-center max-w-2xl mx-auto">
         <p class="eyebrow mb-4">The Diagnosis</p>
-        <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Where your business leaks</h2>
+        <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Where your business <span class="hl">leaks</span></h2>
         <p class="mt-4 text-steel-light leading-body">Six failure points we find in almost every operation — before we automate it away.</p>
       </div>
 
@@ -788,7 +792,7 @@
 </section>
 
 <!-- ============ WHAT WE OFFER (COVERFLOW) ============ -->
-<section id="offer" class="relative bg-obsidian py-8 sm:py-12 overflow-hidden">
+<section id="offer" class="relative bg-obsidian py-8 overflow-hidden">
   <!-- big background wordmark -->
   <div aria-hidden="true" class="pointer-events-none select-none absolute top-16 inset-x-0 text-center">
     <span class="font-display font-700 tracking-display text-[18vw] leading-none text-white/[0.03]">OFFER</span>
@@ -797,15 +801,15 @@
   <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
     <div class="text-center max-w-2xl mx-auto">
       <p class="eyebrow mb-4">What We Offer</p>
-      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Systems we build</h2>
+      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Systems we <span class="hl">build</span></h2>
       <p class="mt-4 text-steel-light leading-body">Six core builds. Each one removes a bottleneck and runs on its own.</p>
     </div>
 
     <!-- coverflow -->
-    <div class="coverflow-stage relative mt-5 sm:mt-8 h-[350px] sm:h-[420px]" id="coverflow">
+    <div class="coverflow-stage relative mt-5 sm:mt-6 h-[370px] sm:h-[400px]" id="coverflow">
       <!-- cards injected/positioned by JS; markup below -->
       <div class="cf-card" data-cf>
-        <img src="Images/Website.png" alt="Websites" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="Images/Website.png" alt="Websites" class="absolute inset-0 w-full h-full object-cover object-top" />
         <div class="cf-tint"></div><div class="cf-overlay"></div>
         <div class="absolute bottom-0 inset-x-0 p-5">
           <span class="font-mono text-[.62rem] uppercase tracking-[.16em] text-voltage">01 / Web</span>
@@ -815,7 +819,7 @@
       </div>
 
       <div class="cf-card" data-cf>
-        <img src="Images/Ai%20Automation.png" alt="AI Automations" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="Images/Ai%20Automation.png" alt="AI Automations" class="absolute inset-0 w-full h-full object-cover object-top" />
         <div class="cf-tint"></div><div class="cf-overlay"></div>
         <div class="absolute bottom-0 inset-x-0 p-5">
           <span class="font-mono text-[.62rem] uppercase tracking-[.16em] text-voltage">02 / Automation</span>
@@ -825,7 +829,7 @@
       </div>
 
       <div class="cf-card" data-cf>
-        <img src="Images/Ai%20Agents.png" alt="AI Agents" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="Images/Ai%20Agents.png" alt="AI Agents" class="absolute inset-0 w-full h-full object-cover object-top" />
         <div class="cf-tint"></div><div class="cf-overlay"></div>
         <div class="absolute bottom-0 inset-x-0 p-5">
           <span class="font-mono text-[.62rem] uppercase tracking-[.16em] text-voltage">03 / Agents</span>
@@ -835,7 +839,7 @@
       </div>
 
       <div class="cf-card" data-cf>
-        <img src="Images/Voice%20Agents.png" alt="Voice Agents" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="Images/Voice%20Agents.png" alt="Voice Agents" class="absolute inset-0 w-full h-full object-cover object-top" />
         <div class="cf-tint"></div><div class="cf-overlay"></div>
         <div class="absolute bottom-0 inset-x-0 p-5">
           <span class="font-mono text-[.62rem] uppercase tracking-[.16em] text-voltage">04 / Voice</span>
@@ -845,7 +849,7 @@
       </div>
 
       <div class="cf-card" data-cf>
-        <img src="Images/Ai%20Consulting.png" alt="AI Consulting" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="Images/Ai%20Consulting.png" alt="AI Consulting" class="absolute inset-0 w-full h-full object-cover object-top" />
         <div class="cf-tint"></div><div class="cf-overlay"></div>
         <div class="absolute bottom-0 inset-x-0 p-5">
           <span class="font-mono text-[.62rem] uppercase tracking-[.16em] text-voltage">05 / Strategy</span>
@@ -855,7 +859,7 @@
       </div>
 
       <div class="cf-card" data-cf>
-        <img src="Images/Saas%20Builds.png" alt="SaaS Builds" class="absolute inset-0 w-full h-full object-cover" />
+        <img src="Images/Saas%20Builds.png" alt="SaaS Builds" class="absolute inset-0 w-full h-full object-cover object-top" />
         <div class="cf-tint"></div><div class="cf-overlay"></div>
         <div class="absolute bottom-0 inset-x-0 p-5">
           <span class="font-mono text-[.62rem] uppercase tracking-[.16em] text-voltage">06 / Product</span>
@@ -866,13 +870,13 @@
     </div>
 
     <!-- controls -->
-    <div class="flex items-center justify-center gap-4 mt-5">
-      <button id="cfPrev" aria-label="Previous" class="btn w-12 h-12 rounded-full border border-white/15 inline-flex items-center justify-center text-ivory hover:bg-white/5 hover:border-white/40 focus-visible:outline-2 focus-visible:outline-voltage">
-        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+    <div class="flex items-center justify-center gap-4 mt-4">
+      <button id="cfPrev" aria-label="Previous" class="btn w-10 h-10 rounded-full border border-white/15 inline-flex items-center justify-center text-ivory hover:bg-white/5 hover:border-white/40 focus-visible:outline-2 focus-visible:outline-voltage">
+        <i data-lucide="chevron-left" class="w-4 h-4"></i>
       </button>
       <div id="cfDots" class="flex items-center gap-2"></div>
-      <button id="cfNext" aria-label="Next" class="btn w-12 h-12 rounded-full border border-white/15 inline-flex items-center justify-center text-ivory hover:bg-white/5 hover:border-white/40 focus-visible:outline-2 focus-visible:outline-voltage">
-        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+      <button id="cfNext" aria-label="Next" class="btn w-10 h-10 rounded-full border border-white/15 inline-flex items-center justify-center text-ivory hover:bg-white/5 hover:border-white/40 focus-visible:outline-2 focus-visible:outline-voltage">
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
       </button>
     </div>
   </div>
@@ -883,7 +887,7 @@
   <div id="workPin" class="min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-5 sm:px-6 pt-24 pb-12 sm:py-16">
     <div class="text-center max-w-2xl mx-auto mb-8 lg:mb-10">
       <p class="eyebrow mb-4">Selected Work</p>
-      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Built to simplify operations</h2>
+      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Built to <span class="hl">simplify operations</span></h2>
       <p class="mt-4 text-steel-light leading-body">Scroll through systems we've shipped — each one removed a bottleneck for real.</p>
     </div>
 
@@ -970,7 +974,7 @@
   <div class="relative max-w-6xl mx-auto px-5 sm:px-6" data-cmp-wrap>
     <div class="text-center max-w-2xl mx-auto">
       <p class="eyebrow mb-3">Before / After</p>
-      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">The difference is clear</h2>
+      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">The difference is <span class="hl">clear</span></h2>
       <p class="mt-4 text-steel-light leading-body">Same business. One runs on manual effort, the other runs on systems.</p>
     </div>
 
@@ -1034,7 +1038,7 @@
   <div class="max-w-5xl mx-auto px-5 sm:px-6">
     <div class="text-center max-w-2xl mx-auto">
       <p class="eyebrow mb-4">Our Approach</p>
-      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">How we build</h2>
+      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">How we <span class="hl">build</span></h2>
       <p class="mt-4 text-steel-light leading-body">Six steps from first call to a system running in production.</p>
     </div>
 
@@ -1131,7 +1135,7 @@
     <!-- left -->
     <div>
       <p class="eyebrow mb-4">Contact Nexora</p>
-      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Let's build your system</h2>
+      <h2 class="font-display font-700 tracking-display text-3xl sm:text-5xl text-ivory">Let's build <span class="hl">your system</span></h2>
       <p class="mt-4 text-steel-light leading-body max-w-md">Tell us what's slowing you down. We'll map the system and tell you what we'd automate first — usually live within 48 hours.</p>
 
       <div class="mt-10 space-y-5">
@@ -1153,7 +1157,7 @@
         </div>
         <div class="flex items-center gap-4">
           <span class="w-11 h-11 rounded-lg bg-card border border-white/10 inline-flex items-center justify-center text-voltage"><i data-lucide="map-pin" class="w-5 h-5"></i></span>
-          <span><span class="block font-mono text-[.6rem] uppercase tracking-[.16em] text-steel">Based in</span><span class="text-ivory text-base">Kerala, India</span></span>
+          <span><span class="block font-mono text-[.6rem] uppercase tracking-[.16em] text-steel">Based in</span><span class="text-voltage text-base">Kerala, India</span></span>
         </div>
       </div>
     </div>
@@ -1163,7 +1167,7 @@
       <!-- mobile-only form header (desktop uses the left column heading) -->
       <div class="lg:hidden mb-4">
         <p class="eyebrow mb-2">Start your build</p>
-        <h3 class="font-display font-700 tracking-display text-xl sm:text-2xl text-ivory">Tell us what to automate</h3>
+        <h3 class="font-display font-700 tracking-display text-xl sm:text-2xl text-ivory">Tell us what to <span class="hl">automate</span></h3>
         <p class="mt-1.5 text-steel-light text-sm leading-snug">Fill this in and we'll map your system — reply within 24 hours.</p>
       </div>
       <form id="contactForm" novalidate class="space-y-3.5 sm:space-y-5">
@@ -1188,8 +1192,8 @@
           <p class="field-error" data-error-for="company">Please enter your company.</p>
         </div>
         <div>
-          <label for="message" class="block font-mono text-[.62rem] uppercase tracking-[.16em] text-steel-light mb-2">What you want to automate</label>
-          <textarea id="message" name="message" rows="4" class="field resize-none" placeholder="e.g. qualify inbound leads and book calls automatically" required></textarea>
+          <label for="message" class="block font-mono text-[.62rem] uppercase tracking-[.16em] text-steel-light mb-2">Message us</label>
+          <textarea id="message" name="message" rows="4" class="field resize-none" placeholder="Tell us about your business, your goals, or the challenge you're looking to solve." required></textarea>
           <p class="field-error" data-error-for="message">Tell us a little about what you need.</p>
         </div>
         <button type="submit" class="btn btn-primary w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold font-display">
@@ -1219,10 +1223,10 @@
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 pb-14 border-b border-white/8">
       <div class="max-w-xl">
         <p class="eyebrow mb-4">Ready when you are</p>
-        <h2 class="font-display font-700 tracking-display text-3xl sm:text-[2.75rem] leading-[1.05] text-ivory">Let's build a system that runs itself.</h2>
+        <h2 class="font-display font-700 tracking-display text-3xl sm:text-[2.75rem] leading-[1.05] text-ivory">Let's build a system that <span class="hl">runs itself</span>.</h2>
       </div>
       <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
-        <a href="https://wa.me/919947648028" target="_blank" rel="noopener" class="btn btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold font-display">WhatsApp Us <i data-lucide="message-circle" class="w-4 h-4"></i></a>
+        <a href="https://wa.me/919947648028" target="_blank" rel="noopener" class="btn btn-primary inline-flex items-center rounded-full px-7 py-3.5 text-base font-semibold font-display">Get in touch</a>
         <span class="inline-flex items-center gap-2 font-mono text-[.66rem] uppercase tracking-[.16em] text-steel-light"><span class="w-2 h-2 rounded-full bg-success" style="box-shadow:0 0 10px rgba(15,138,95,.9);"></span>Available for new builds</span>
       </div>
     </div>
@@ -1273,7 +1277,7 @@
           <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-voltage shrink-0"></i><a href="tel:+919947648028" class="link-voltage">+91 99476 48028</a></li>
           <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="text-voltage shrink-0" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45C23.2 24 24 23.22 24 22.27V1.73C24 .77 23.2 0 22.22 0z"/></svg><a href="https://www.linkedin.com/in/roshan-p-nambisan" target="_blank" rel="noopener" class="link-voltage">roshan-p-nambisan</a></li>
           <li class="flex items-center gap-3"><i data-lucide="globe" class="w-4 h-4 text-voltage shrink-0"></i><a href="https://www.nexorasystems.cloud" target="_blank" rel="noopener" class="link-voltage">www.nexorasystems.cloud</a></li>
-          <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-voltage shrink-0"></i><span class="text-steel-light">Kerala, India</span></li>
+          <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-voltage shrink-0"></i><span class="text-voltage">Kerala, India</span></li>
         </ul>
       </div>
     </div>
@@ -1591,7 +1595,7 @@ window.addEventListener('scroll', () => {
       if (offset < -n / 2) offset += n;
       const abs = Math.abs(offset);
       const isMobile = window.innerWidth < 640;
-      const spread = isMobile ? 130 : 230;
+      const spread = isMobile ? 144 : 262;
       const x = offset * spread;
       const rotY = offset === 0 ? 0 : (offset > 0 ? -42 : 42);
       const scale = offset === 0 ? 1 : Math.max(0.7, 0.85 - abs * 0.08);
@@ -1615,7 +1619,7 @@ window.addEventListener('scroll', () => {
      Advances on a timer, but only while the section is on screen and the user
      isn't interacting (hover / focus / drag). Disabled for reduced-motion.
      Every manual action resets the timer so it never fights the user. */
-  const AUTO_MS = 3800;
+  const AUTO_MS = 3300;
   let autoTimer = null, inView = false, paused = false;
   function restart() {
     if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
@@ -1964,6 +1968,19 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => Scro
       if (firstInvalid) firstInvalid.focus();
       return;
     }
+
+    // Forward the submission to the Nexora Google Form. no-cors gives an opaque
+    // response (we can't read status), but the entry IDs below map each of our
+    // fields to the matching Google Form question, so the row is recorded.
+    const GFORM = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSecFtvUelxdfukOUEKRCVRfajGZbrn1xKhK9cHKJq_Nzf7UfQ/formResponse';
+    const payload = new FormData();
+    payload.append('entry.1793471203', document.getElementById('name').value.trim());    // Full Name
+    payload.append('entry.1069918157', document.getElementById('email').value.trim());   // Email Address
+    payload.append('entry.976788016', document.getElementById('phone').value.trim());     // Phone Number
+    payload.append('entry.592073536', document.getElementById('company').value.trim());   // Company Name
+    payload.append('entry.1946577933', document.getElementById('message').value.trim());  // Message
+    fetch(GFORM, { method: 'POST', mode: 'no-cors', body: payload }).catch(() => {});
+
     form.classList.add('hidden');
     success.classList.remove('hidden');
     if (!prefersReduced) gsap.from(success, { opacity: 0, y: 16, duration: 0.5, ease: 'power3.out' });
