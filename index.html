@@ -183,10 +183,10 @@
      arrows) always fits inside one screen, never exceeding it. */
   .coverflow-stage {
     perspective: 1800px;
-    --cf-text-h: clamp(84px, 11vh, 116px);
-    --cf-h: clamp(330px, 56vh, 560px);
+    --cf-text-h: clamp(80px, 10vh, 110px);
+    --cf-h: clamp(348px, 60vh, 600px);
     --cf-img-h: calc(var(--cf-h) - var(--cf-text-h));
-    --cf-w: calc(var(--cf-img-h) * 3 / 4);   /* image pane stays 3:4 */
+    --cf-w: calc(var(--cf-img-h) * 4 / 5);   /* image pane 4:5 — wider + longer */
     height: var(--cf-h);
   }
   .cf-card {
